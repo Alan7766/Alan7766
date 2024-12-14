@@ -16,9 +16,13 @@ playerY = 500
 playerX_change = 0
 playerY_change = 0
 
-enemyImg = pygame.image.load('enemy.png')
-enemyX = 100
-enemyY = 100
+enemyImg = pygame.image.load('sign.png')
+enemyX = 200
+enemyY = 200
+
+lifeImg = pygame.image.load('lifes.png')
+lifeX = 200
+lifeY = 200
 
 signImg = pygame.image.load('sign.png')
 signX = 300
@@ -32,8 +36,50 @@ sign3Img = pygame.image.load('sign.png')
 sign3X = 120
 sign3Y = 30
 
+sign4Img = pygame.image.load('sign.png')
+sign4X = 300
+sign4Y = 300
+
+sign5Img = pygame.image.load('sign.png')
+sign5X = 330
+sign5Y = 130
+
+sign6Img = pygame.image.load('sign.png')
+sign6X = 220
+sign6Y = 30
+
+sign7Img = pygame.image.load('sign.png')
+sign7X = 300
+sign7Y = 40
+
+sign8Img = pygame.image.load('sign.png')
+sign8X = 20
+sign8Y = 130
+
+sign9Img = pygame.image.load('sign.png')
+sign9X = 12
+sign9Y = 30
+
+sign10Img = pygame.image.load('sign.png')
+sign10X = 40
+sign10Y = 300
+
+sign11Img = pygame.image.load('sign.png')
+sign11X = 50
+sign11Y = 130
+
+sign12Img = pygame.image.load('sign.png')
+sign12X = 5
+sign12Y = 60
+
 def player(x,y):
     screen.blit(playerImg, (x,y))
+
+def life(x,y):
+    screen.blit(lifeImg, (x,y))
+
+def enemy(x,y):
+    screen.blit(enemyImg, (x,y))
 
 def sign(x,y):
     screen.blit(signImg, (x,y))
@@ -44,8 +90,33 @@ def sign2(x,y):
 def sign3(x,y):
     screen.blit(sign3Img, (x,y))
 
-def enemy(x,y):
-    screen.blit(enemyImg, (x,y))
+def sign4(x,y):
+    screen.blit(sign4Img, (x,y))
+
+def sign5(x,y):
+    screen.blit(sign5Img, (x,y))
+
+def sign6(x,y):
+    screen.blit(sign6Img, (x,y))
+
+def sign7(x,y):
+    screen.blit(sign7Img, (x,y))
+
+def sign8(x,y):
+    screen.blit(sign8Img, (x,y))
+
+def sign9(x,y):
+    screen.blit(sign9Img, (x,y))
+
+def sign10(x,y):
+    screen.blit(sign10Img, (x,y))
+
+def sign11(x,y):
+    screen.blit(sign11Img, (x,y))
+
+def sign12(x,y):
+    screen.blit(sign12Img, (x,y))
+
 
 running = True
 
@@ -70,10 +141,20 @@ while running:
                 playerY_change = 0
 
         player(playerX,playerY)
+        life(lifeX,lifeY)
+        sign7(sign7X, sign7Y)
+        sign8(sign8X,sign8Y)
+        sign9(sign9X,sign9Y)
+        sign10(sign10X,sign10Y)
+        sign11(sign11X,sign11Y)
+        sign12(sign12X,sign12Y)
+        enemy(enemyX,enemyY)
+        enemyY += 0.5
+        sign4(sign4X, sign4Y)
+        sign5(sign5X,sign5Y)
+        sign6(sign6X,sign6Y)
         sign2(sign2X,sign2Y)
         sign3(sign3X,sign3Y)
-        enemyY += 0.9
-        enemy(enemyX,enemyY)
         sign(signX,signY)
         playerX += playerX_change
         playerY += playerY_change
